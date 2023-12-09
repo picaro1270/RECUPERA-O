@@ -24,7 +24,6 @@ int main() {
   int codigoProduto;
   float quantidade;
   float total;
-  printf("ICAROLANCHES QUAL LANCHE DESEJA:\n ");
   scanf("%d", &codigoProduto);
   scanf("%f", &quantidade);
 
