@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+  // Declaração de variáveis
+  int inter_wins = 0, 
+      gremio_wins = 0, 
+      draws = 0, 
+      games = 0; 
+  int ops; 
+
+  
+  do {
+    // Lê o resultado da partida
+    scanf("%d %d", &inter_wins, &gremio_wins);
+
+    // Incrementa o número de partidas
+    games++;
+
+    // Imprime o menu
+    printf("Novo grenal (1-sim 2-nao)\n");
+    scanf("%d", &ops);
+  } while (ops == 1);
+
+  // Imprime o resultado
+  printf("%d grenais\n", games);
+  printf("Inter:%d\n", inter_wins);
+  printf("Gremio:%d\n", gremio_wins);
+  printf("Empates:%d\n", draws);
+
+  // Verifica o vencedor
+  printf(gremio_wins > inter_wins ? "Gremio venceu mais\n" : inter_wins > gremio_wins ? "Inter venceu mais\n" : "Não houve vencedor\n");
+  return 0;
+}
