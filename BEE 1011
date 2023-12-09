@@ -14,9 +14,8 @@ double calculateSphereVolume(double radius) {
 
 int main() {
   //variaveis 
-  double radius, volume;
-
-  printf("Qual volume da esfera: ");
+  double radius;
+  double volume;
   scanf("%lf", &radius);
   volume = calculateSphereVolume(radius);
   if (volume >= 0) {
