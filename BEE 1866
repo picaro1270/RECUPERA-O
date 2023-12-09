@@ -1,0 +1,31 @@
+#include <stdlib.h>
+
+int main() {
+  int N, i;
+  int *a;
+
+  scanf("%d", &N);
+
+  //  memória para o vetor
+  a = malloc(N * sizeof(int));
+
+  // VERIFICAÇÃO
+  if (a != NULL && N >= 1 && N <= 1000) {
+    // Lê todos os números para o vetor
+    for (i = 0; i < N; i++) {
+      scanf("%d", &a[i]);
+    }
+
+    // Imprime o vetor
+    for (i = 0; i < N; i++) {
+      printf("%d\n", a[i] % 2);
+    }
+  } else {
+    printf("Valor inválido!\n");
+  }
+
+  // Libera a memória alocada
+  free(a);
+
+  return 0;
+}
