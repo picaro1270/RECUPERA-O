@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+const float CONSUMO_POR_KM = 12.0f;
+
+int main() {
+  int tempo;
+  int velocidade;
+  float distancia;
+  float litros;
+
+  // dados de entrada
+  
+  scanf("%d", &tempo);
+  scanf("%d", &velocidade);
+
+  // Calculo da distancia
+  distancia = tempo * velocidade;
+
+  // Calcula a quantidade de litros necessária
+  litros = distancia / CONSUMO_POR_KM;
+
+  // Exibe o resultado
+  printf("%.3f\n", litros);
+
+  return 0;
+}
