@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+// Função para calcular o total de um produto
+float calcularTotal(int codigoProduto, float quantidade) {
+  switch (codigoProduto) {
+    case 1:
+      return quantidade * 4.00;
+    case 2:
+      return quantidade * 4.50;
+    case 3:
+      return quantidade * 5.00;
+    case 4:
+      return quantidade * 2.00;
+    case 5:
+      return quantidade * 1.50;
+    default:
+      printf("produto inválido.\n");
+      return -1;
+  }
+}
+
+int main() {
+  // variáveis
+  int codigoProduto;
+  float quantidade;
+  float total;
+  printf("ICAROLANCHES QUAL LANCHE DESEJA:\n ");
+  scanf("%d", &codigoProduto);
+  scanf("%f", &quantidade);
+
+  if (codigoProduto <= 0 || quantidade <= 0) {
+    printf("Código do produto e quantidade devem ser maiores que zero.\n");
+    return 1;
+  }
+
+  // Converte a quantidade para um número inteiro
+  int quantidadeInteira = (int)quantidade;
+
+  total = calcularTotal(codigoProduto, quantidadeInteira);
+
+  if (total >= 0) {
+    printf("Total: R$ %.2f\n", total);
+  }
+
+  return 0;
+}
