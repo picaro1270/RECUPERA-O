@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+  // o uso de fgets para ler de uma maneira mais segura 
+  char a[25];
+  fgets(a, 25, stdin);
+
+  a[strcspn(a, "\n")] = '\0';
+  //Verificação se a string vai ate 10 caracteres
+  if (strlen(a) >= 10) {
+    printf("palavrao\n");
+  } else {
+    printf("palavrinha\n");
+  }
+}
