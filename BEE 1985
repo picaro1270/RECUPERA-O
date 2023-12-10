@@ -1,0 +1,31 @@
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int n, i, b;
+// utilizando 0.0 para acumular o valor
+  float a, s = 0.0;
+  //cada preço 
+  float prices[] = {1.50, 2.50, 3.50, 4.50, 5.50};
+
+  scanf("%d", &n);
+
+  for (i = 1; i <= n; i++) {
+    scanf("%f %d", &a, &b);
+
+    int code = (int)a;
+    //1001 ate 1005 apenas 
+    if (code < 1001 || code > 1005) {
+    // para ver se o item é valido
+      printf("Invalid item code: %f\n", a);
+      continue;
+    }
+
+    a = prices[code - 1001];
+    s += a * b;
+  }
+
+  printf("%.2f\n", s);
+
+  return 0;
+}
